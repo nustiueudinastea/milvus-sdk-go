@@ -79,7 +79,7 @@ type SearchIterator struct {
 	client *GrpcClient
 }
 
-func (itr SearchIterator) init(ctx context.Context) error {
+func (itr *SearchIterator) init(ctx context.Context) error {
 	if itr.batchSize <= 0 {
 		return errors.New("batch size cannot less than 1")
 	}
